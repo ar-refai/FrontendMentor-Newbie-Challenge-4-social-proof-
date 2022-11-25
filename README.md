@@ -1,2 +1,5 @@
-# FrontendMentor-Newbie-Challenge-4-social-proof-
-Design of a Social Proof Section Component as Practice Using HTML , CSS.
+# Frontend Mentor - Social proof section
+
+![Design preview for the Social proof section coding challenge](./design/desktop-preview.jpg)
+
+## Welcome! 👋

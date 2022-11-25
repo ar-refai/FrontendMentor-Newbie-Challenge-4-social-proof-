@@ -1,0 +1,207 @@
+/* Colors And Fixed Vars */
+:root {
+    /* primary colors */
+    --drkMgt: hsl(300, 43%, 22%);
+    --sftPnk: hsl(333, 80%, 67%);
+    /* sec colors */
+    --drkGryMgt: hsl(303, 10%, 53%);
+    --lgtGryMgt: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* Main Font */
+@font-face {
+    font-family: myMainFont;
+    src: url(font/LeagueSpartan-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: myMainFontBold;
+    src: url(font/static/LeagueSpartan-ExtraBold.ttf);
+}
+/* Genetral Styling */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Body Styling */
+body {
+    min-height: 100vh;
+    background-color: var(--white);
+    background-image: 
+    url(images/bg-pattern-top-mobile.svg),
+    url(images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    font-family: myMainFont, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+/* social proof section */
+.social-proof {
+    padding: 60px 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.social-head,
+.rating,
+.testomonial {
+    padding:20px 0;
+}
+.social-head,
+.rating {
+    text-align: center;
+}
+/* First Div Head */
+.social-head h1 {
+    font-size: 40px;
+    font-weight:900;
+    padding:0 30px;
+    color:var(--drkMgt);
+    font-family: myMainFontBold, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.social-head p {
+    opacity: .6;
+    padding:20px 10px; 
+}
+/* Seconed Div Rating */
+.rating .rate {
+    border-radius: 5px;
+}
+.rating > div {
+    background-color: var(--lgtGryMgt);
+    margin:20px 0;
+    padding:20px 40px;
+}
+.rating > div .rate-card img{
+    padding:1px;
+}
+.rating > div p {
+    font-weight: 900;
+    color:var(--drkMgt);
+    margin-top: 10px;
+}
+/* testomonial styling */
+.testomonial .test {
+    background-color:var(--drkMgt);
+    padding:40px 30px; 
+    margin:20px 0;
+    border-radius: 10px;
+}
+.testomonial .test-head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom:20px;
+}
+.testomonial  img{
+    border-radius: 50%;
+    margin-right:20px;
+}
+.testomonial .test-cont p{
+    color:var(--white);
+}
+.testomonial .test-cont a{
+    text-decoration: none;
+    color:var(--sftPnk);
+    opacity: .8;    
+}
+.testomonial .test-talk {
+    color:var(--white);
+    line-height: 1.6;
+} 
+
+/* responsive web page */
+@media only screen and (min-width: 1440px) {
+    body {
+        background-image: 
+        url(images/bg-pattern-top-desktop.svg),
+        url(images/bg-pattern-bottom-desktop.svg);
+
+    }
+    /* top sections */
+    .social-proof h1 {
+        font-size: 60px;
+        text-align: left;
+        padding:0;
+    }
+    .social-proof {
+        width:80%;
+        margin:auto;
+    }
+    .social-proof .social-top{
+        display: flex;
+        flex-direction: row;
+    }
+    .social-proof .social-head {
+        width:30%;
+    }
+    .social-head p {
+        padding: 40px 0;
+        font-size: 20px;
+        line-height: 1.2;
+        text-align: left;
+    }
+    
+    /* rating  */
+    .social-proof .rating {
+        width:70%;
+        margin: auto;
+    }
+    .social-proof .rating  .rate{
+        position:relative;
+        display: flex;
+        flex-direction:row ;
+        align-items: center ;
+        justify-content: flex-start;
+        width:60%;
+        margin:30px auto;
+    }
+    .social-proof .rating  .rate:first-of-type{
+        position:relative;
+        left:0;
+    }
+    .social-proof .rating  .rate:nth-of-type(2){
+        position:relative;
+        left:80px;
+    }
+    .social-proof .rating  .rate:nth-of-type(3){
+        position:relative;
+        left:160px;
+    }
+    .rating > div p {
+        margin-top: 0;
+        margin-left: 30px;
+    }
+    /* bottom section */
+    .testomonial {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .testomonial .test {
+        margin:20px 0;
+        margin-right: 30px;
+    }
+    .testomonial .test:last-of-type{
+        margin-right: 0;
+    }
+    .testomonial .first-test {
+        position: relative;
+        top:0;
+        
+    }
+    .testomonial .seconed-test {
+        position: relative;
+        top:20px;
+        
+    }
+    .testomonial .third-test {
+        position: relative;
+        top:30px;
+        
+    }
+}
